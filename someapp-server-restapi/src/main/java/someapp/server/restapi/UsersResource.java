@@ -1,7 +1,5 @@
 package someapp.server.restapi;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-import someapp.vo.MyValidationException;
 import someapp.vo.UserId;
 import someapp.vo.Username;
 
@@ -25,7 +23,7 @@ public class UsersResource {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUser(final @PathParam("id") UserId userId) throws MyValidationException {
+    public Response getUser(final @PathParam("id") UserId userId) {
         return Response.ok(userService.find(userId)).build();
     }
 

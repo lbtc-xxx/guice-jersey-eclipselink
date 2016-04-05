@@ -1,6 +1,5 @@
 package someapp.server.entity;
 
-import someapp.vo.MyValidationException;
 import someapp.vo.UserId;
 import someapp.vo.Username;
 
@@ -16,12 +15,8 @@ public class User {
     private String username;
 
     public UserId getId() {
-        try {
-            // store cached instance into a @Transient field instead if performance matters
-            return new UserId(id);
-        } catch (final MyValidationException e) {
-            throw new RuntimeException(e);
-        }
+        // store cached instance into a @Transient field instead if performance matters
+        return new UserId(id);
     }
 
     public void setId(final UserId id) {
@@ -29,11 +24,7 @@ public class User {
     }
 
     public Username getUsername() {
-        try {
-            return new Username(username);
-        } catch (final MyValidationException e) {
-            throw new RuntimeException(e);
-        }
+        return new Username(username);
     }
 
     public void setUsername(final Username username) {

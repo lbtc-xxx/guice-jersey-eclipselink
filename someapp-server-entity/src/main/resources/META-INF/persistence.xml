@@ -7,7 +7,7 @@
         <class>someapp.server.entity.User</class>
         <shared-cache-mode>NONE</shared-cache-mode>
         <properties>
-            <!-- use non-jta-datasource instead! this is just an example -->
+            <!-- use datasource instead. this is just an example -->
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:myDB;create=true"/>
             <property name="javax.persistence.jdbc.user" value="app"/>
