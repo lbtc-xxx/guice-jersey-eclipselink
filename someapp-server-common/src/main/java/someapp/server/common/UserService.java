@@ -1,4 +1,4 @@
-package someapp.server.restapi;
+package someapp.server.common;
 
 import com.google.inject.persist.Transactional;
 import someapp.server.entity.User;

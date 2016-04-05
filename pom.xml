@@ -12,6 +12,9 @@
         <module>someapp-vo</module>
         <module>someapp-server-entity</module>
         <module>someapp-server-restapi</module>
+        <module>someapp-server-test-util</module>
+        <module>someapp-server-test-fixture</module>
+        <module>someapp-server-common</module>
     </modules>
 
     <properties>
@@ -26,6 +29,22 @@
                 <groupId>javax</groupId>
                 <artifactId>javaee-api</artifactId>
                 <version>7.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject.extensions</groupId>
+                <artifactId>guice-servlet</artifactId>
+                <version>4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject.extensions</groupId>
+                <artifactId>guice-persist</artifactId>
+                <version>4.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

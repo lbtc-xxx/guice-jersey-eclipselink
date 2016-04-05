@@ -1,5 +1,6 @@
 package someapp.server.restapi;
 
+import someapp.server.common.UserService;
 import someapp.vo.UserId;
 import someapp.vo.Username;
 
@@ -31,7 +32,6 @@ public class UsersResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public Response addUser(final @FormParam("name") Username username) {
-        final UserId userId = userService.save(username);
-        return Response.ok(userId).build();
+        return Response.ok(userService.save(username)).build();
     }
 }
